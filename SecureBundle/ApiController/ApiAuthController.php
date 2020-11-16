@@ -3,7 +3,7 @@
 namespace NetBS\SecureBundle\ApiController;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ApiAuthController extends AbstractController
@@ -13,6 +13,7 @@ class ApiAuthController extends AbstractController
      */
     public function getTokenAction()
     {
-        return new Response('', 401);
+        $user = $this->getUser();
+        return new JsonResponse();
     }
 }

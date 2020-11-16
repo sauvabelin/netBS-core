@@ -1,4 +1,3 @@
-
 net_bs_secure:
     resource: "@NetBSSecureBundle/Controller/"
     type:     annotation
