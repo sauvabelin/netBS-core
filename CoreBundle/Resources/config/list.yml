@@ -20,6 +20,7 @@ services:
 
     NetBS\CoreBundle\ListModel\Action\ModalAction:
         arguments:
+            - "@twig.extension.assets"
         tags:
             - {name: netbs.list_action }
 
