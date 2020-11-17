@@ -10,8 +10,5 @@ services:
             - { name: netbs.previewer }
 
     NetBS\CoreBundle\Exporter\CSVPreviewer:
-#        arguments:
-#            - "@property_accessor"
-#            - "@twig"
         tags:
             - { name: netbs.previewer }

@@ -30,19 +30,13 @@ services:
             - { name: netbs.log_representer }
 
     NetBS\FichierBundle\LogRepresenter\AdresseLogRepresenter:
-#        arguments:
-#            - "@netbs.fichier.contact_manager"
         tags:
             - { name: netbs.log_representer }
 
     NetBS\FichierBundle\LogRepresenter\TelephoneLogRepresenter:
-#        arguments:
-#            - "@netbs.fichier.contact_manager"
         tags:
             - { name: netbs.log_representer }
 
     NetBS\FichierBundle\LogRepresenter\EmailLogRepresenter:
-#        arguments:
-#            - "@netbs.fichier.contact_manager"
         tags:
             - { name: netbs.log_representer }

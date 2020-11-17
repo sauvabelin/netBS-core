@@ -5,19 +5,13 @@ services:
         autoconfigure: true
 
     NetBS\FichierBundle\Helper\MembreHelper:
-#        arguments:
-#            - "@netbs.fichier.config"
         tags:
             - { name: netbs.helper }
 
     NetBS\FichierBundle\Helper\FamilleHelper:
-#        arguments:
-#            - "@netbs.fichier.config"
         tags:
             - { name: netbs.helper }
 
     NetBS\FichierBundle\Helper\GroupeHelper:
-#        arguments:
-#            - "@netbs.fichier.config"
         tags:
             - { name: netbs.helper }

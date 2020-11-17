@@ -5,14 +5,10 @@ services:
         autoconfigure: true
 
     NetBS\CoreBundle\Form\FormErrorExtension:
-#        arguments:
-#            - "@session"
         tags:
             - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\FormType }
 
     NetBS\CoreBundle\Form\Type\DatepickerType:
-#        arguments:
-#            - "@netbs.params"
         tags:
             - { name: form.type }
 
@@ -21,8 +17,6 @@ services:
             - { name: form.type }
 
     NetBS\CoreBundle\Form\Type\DateMaskType:
-#        arguments:
-#            - "@netbs.params"
         tags:
             - { name: form.type }
 
@@ -39,8 +33,5 @@ services:
             - { name: form.type }
 
     NetBS\CoreBundle\Form\Type\AjaxSelect2DocumentType:
-#        arguments:
-#            - "@doctrine.orm.entity_manager"
-#            - "@netbs.core.select2_providers_manager"
         tags:
             - { name: form.type }

@@ -20,12 +20,7 @@ services:
         resource: '../../DataFixtures'
         tags: ['doctrine.fixture.orm']
 
-    NetBS\SecureBundle\Service\UserManager:
-        public: true
-#        arguments:
-#            - "@security.password_encoder"
-#            - "@netbs.secure.config"
-#            - "@doctrine.orm.entity_manager"
+    NetBS\SecureBundle\Service\UserManager: ~
 
     NetBS\SecureBundle\Service\SecureConfig:
         arguments:
@@ -40,17 +35,10 @@ services:
         - { name: netbs.list.model }
 
     NetBS\SecureBundle\Listener\MainMenuListener:
-#        arguments:
-#            - "@security.token_storage"
-#            - "@doctrine.orm.entity_manager"
-#            - "@netbs.secure.config"
         tags:
             - { name: kernel.event_listener, event: netbs.menu.extend, method: onMenuConfigure, priority: 60 }
 
     NetBS\SecureBundle\Listener\RemoveMembreListener:
-#        arguments:
-#            - "@netbs.secure.config"
-#            - "@netbs.secure.user_manager"
         tags:
             - { name: kernel.event_listener, event: netbs.remove.membre, method: onRemove }
 
@@ -63,28 +51,17 @@ services:
             - { name: netbs.select2_provider }
 
     NetBS\SecureBundle\Subscriber\DoctrineMapperSubscriber:
-#        arguments:
-#            - "@netbs.fichier.config"
-#            - "@netbs.secure.config"
         tags:
             - { name: doctrine.event_subscriber }
 
     NetBS\SecureBundle\Form\UserType:
-#        arguments:
-#            - "@netbs.fichier.config"
-#            - "@netbs.secure.config"
         tags:
             - { name: form.type }
 
     NetBS\SecureBundle\Form\AutorisationType:
-#        arguments:
-#        - "@netbs.fichier.config"
-#        - "@netbs.secure.config"
         tags:
         - { name: form.type }
 
     NetBS\SecureBundle\Helper\UserHelper:
-#        arguments:
-#            - "@netbs.secure.config"
         tags:
             - { name: netbs.helper }

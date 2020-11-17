@@ -5,9 +5,6 @@ services:
         autoconfigure: true
 
     NetBS\CoreBundle\Block\LayoutManager:
-#        arguments:
-#            - "@netbs.core.blocks_manager"
-#            - "@event_dispatcher"
         public: true
 
     NetBS\CoreBundle\Block\BlockManager:
@@ -18,8 +15,6 @@ services:
             - { name: netbs.block }
 
     NetBS\CoreBundle\Block\Layout\NetBSLayout:
-#        arguments:
-#            - "@twig"
         tags:
             - { name: netbs.block.layout }
 
@@ -32,8 +27,6 @@ services:
             - { name: netbs.block }
 
     NetBS\CoreBundle\Block\ListBlock:
-#        arguments:
-#            - "@netbs.list.engine"
         tags:
             - { name: netbs.block }
 

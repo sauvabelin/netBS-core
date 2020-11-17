@@ -5,8 +5,6 @@ services:
         autoconfigure: true
 
     NetBS\FichierBundle\Listener\NetBSToolbarListener:
-#        arguments:
-#            - "@twig"
         tags:
             - { name: kernel.event_listener, event: netbs.list_model.renderer.toolbar, method: extend }
 

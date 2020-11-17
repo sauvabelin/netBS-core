@@ -5,8 +5,6 @@ services:
         autoconfigure: true
 
     NetBS\FichierBundle\Exporter\CSVMembre:
-#        arguments:
-#            - "@netbs.fichier.config"
         tags:
             - { name: netbs.exporter }
 
@@ -15,7 +13,5 @@ services:
             - { name: netbs.exporter }
 
     NetBS\FichierBundle\Exporter\CSVRega:
-#        arguments:
-#            - "@netbs.fichier.config"
         tags:
             - { name: netbs.exporter }
