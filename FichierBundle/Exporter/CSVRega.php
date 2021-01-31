@@ -8,7 +8,7 @@ use NetBS\CoreBundle\Utils\StrUtil;
 use NetBS\FichierBundle\Mapping\BaseMembre;
 use NetBS\FichierBundle\Mapping\Personne;
 use NetBS\FichierBundle\Service\FichierConfig;
-use SauvabelinBundle\Import\Model\WNGHelper;
+use App\Import\Model\WNGHelper;
 
 class CSVRega extends CSVExporter
 {

@@ -5,7 +5,7 @@ namespace NetBS\CoreBundle\Service;
 use NetBS\CoreBundle\Mailer\MailChannel;
 use NetBS\CoreBundle\Model\MailerConfig;
 use NetBS\SecureBundle\Mapping\BaseUser;
-use SauvabelinBundle\Entity\BSUser;
+use App\Entity\BSUser;
 
 class Mailer
 {

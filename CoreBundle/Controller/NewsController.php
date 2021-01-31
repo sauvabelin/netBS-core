@@ -17,7 +17,7 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 
 /**
  * Class NewsController
- * @package SauvabelinBundle\Controller
+ * @package App\Controller
  * @Route("/news")
  */
 class NewsController extends AbstractController
